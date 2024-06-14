@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Asadpoor's Personal Page</title>
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --header-color: #ffffff;
+            --subheader-color: #bbbbbb;
+            --link-color: #90caf9;
+            --link-hover-color: #ffffff;
+            --border-color: #e0e0e0;
+            --footer-bg-color: #1d1d1d;
+            --footer-text-color: #bbbbbb;
+        }
+
+        .light-theme {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-color: #000000;
+            --subheader-color: #555555;
+            --link-color: #007BFF;
+            --link-hover-color: #0056b3;
+            --border-color: #333333;
+            --footer-bg-color: #f5f5f5;
+            --footer-text-color: #777777;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: var(--header-color);
+            font-weight: 700;
+        }
+        header p {
+            font-size: 1.2em;
+            color: var(--subheader-color);
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+        }
+        nav a:hover {
+            color: var(--link-hover-color);
+            border-color: var(--link-hover-color);
+        }
+        section {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--header-color);
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 1.1em;
+            color: var(--subheader-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .contact-info a {
+            display: block;
+            color: var(--text-color);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .contact-info a:hover {
+            color: var(--link-hover-color);
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ccc;
+            margin-top: 50px;
+            background-color: var(--footer-bg-color);
+            color: var(--footer-text-color);
+        }
+        footer .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.5em;
+        }
+        footer .social-icons a:hover {
+            color: var(--link-hover-color);
+        }
+        .theme-toggle {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 20px;
+			height: 20px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.theme-toggle.dark {
+			background-image: url('dark-mode-night-moon-svgrepo-com.svg'); /* Path to dark mode SVG */
+		}
+
+		.theme-toggle.light {
+			background-image: url('light-mode-svgrepo-com.svg'); /* Path to light mode SVG */
+		}
+
+
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()"></button>
+    <div class="container">
+        <header>
+            <h1>Ali Asadpoor</h1>
+            <p>Software Engineer, Finance and Rocket Enthusiast</p>
+        </header>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">My Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Ali Asadpoor, a passionate software engineer and rocket enthusiast based in the Greater Toronto Area, Ontario. Currently, I am a student, honing my skills and working on various personal projects. I have a deep interest in space-related technology and have volunteered with my university's rocket club, focusing on avionics and ground station operations.</p>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p>Here are some of my projects:</p>
+            <ul>
+                <li><strong>Financial Analysis System:</strong> A personal project for financial data analysis and insights.</li>
+                <li><strong>Membership Management Interface:</strong> A project available on my GitHub, aimed at simplifying membership management.</li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>You can download my resume <a href="link-to-your-resume.pdf" download>here</a>.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me through the following platforms:</p>
+            <div class="contact-info">
+                <a href="mailto:aliasadpoor2@gmail.com">Email: aliasadpoor2@gmail.com</a>
+                <a href="https://www.linkedin.com/in/aliasadpoor" target="_blank">LinkedIn</a>
+                <a href="https://github.com/aliplayer1" target="_blank">GitHub</a>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Ali Asadpoor</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/aliasadpoor" target="_blank">LinkedIn</a>
+                <a href="https://github.com/aliplayer1" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function toggleTheme() {
+			const body = document.body;
+			const themeToggleBtn = document.querySelector('.theme-toggle');
+			body.classList.toggle('light-theme');
+			const isLight = body.classList.contains('light-theme');
+			localStorage.setItem('theme', isLight ? 'light' : 'dark');
+			themeToggleBtn.classList.toggle('light', isLight);
+			themeToggleBtn.classList.toggle('dark', !isLight);
+		}
+
+		function loadTheme() {
+			const savedTheme = localStorage.getItem('theme') || 'dark';
+			const body = document.body;
+			const themeToggleBtn = document.querySelector('.theme-toggle');
+			if (savedTheme === 'light') {
+				body.classList.add('light-theme');
+				themeToggleBtn.classList.add('light');
+			} else {
+				themeToggleBtn.classList.add('dark');
+			}
+		}
+
+loadTheme();
+
+    </script>
+</body>
+</html>
