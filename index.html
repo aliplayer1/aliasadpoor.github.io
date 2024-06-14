@@ -87,19 +87,49 @@
         }
         section p {
             font-size: 1.1em;
-            color: var(--subheader-color);
+            color: var (--subheader-color);
             max-width: 700px;
             margin: 0 auto;
         }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
         .contact-info a {
-            display: block;
+            display: inline-block;
             color: var(--text-color);
             text-decoration: none;
-            margin-bottom: 10px;
             font-size: 1.2em;
+            padding: 10px 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
         }
         .contact-info a:hover {
             color: var(--link-hover-color);
+            border-color: var(--link-hover-color);
+        }
+        .project-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .project-list li {
+            margin-bottom: 15px;
+        }
+        .project-list a.button {
+            margin-left: 1px;
+            padding: 3.5px 7.5px;
+			font-size: 0.6em;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+        }
+        .project-list a.button:hover {
+            color: var(--link-hover-color);
+            border-color: var(--link-hover-color);
         }
         footer {
             text-align: center;
@@ -119,27 +149,25 @@
             color: var(--link-hover-color);
         }
         .theme-toggle {
-			position: absolute;
-			top: 20px;
-			right: 20px;
-			width: 20px;
-			height: 20px;
-			background: none;
-			border: none;
-			cursor: pointer;
-			background-size: cover;
-			background-position: center;
-		}
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+        }
 
-		.theme-toggle.dark {
-			background-image: url('dark-mode-night-moon-svgrepo-com.svg'); /* Path to dark mode SVG */
-		}
+        .theme-toggle.dark {
+            background-image: url('dark-mode-night-moon-svgrepo-com.svg'); /* Path to dark mode SVG */
+        }
 
-		.theme-toggle.light {
-			background-image: url('light-mode-svgrepo-com.svg'); /* Path to light mode SVG */
-		}
-
-
+        .theme-toggle.light {
+            background-image: url('light-mode-svgrepo-com.svg'); /* Path to light mode SVG */
+        }
     </style>
 </head>
 <body>
@@ -162,9 +190,9 @@
         <section id="projects">
             <h2>My Projects</h2>
             <p>Here are some of my projects:</p>
-            <ul>
-                <li><strong>Financial Analysis System:</strong> A personal project for financial data analysis and insights.</li>
-                <li><strong>Membership Management Interface:</strong> A project available on my GitHub, aimed at simplifying membership management.</li>
+            <ul class="project-list">
+                <li><strong>Valuation Analysis Model:</strong> A personal project for financial data analysis and insights. <a href="https://github.com/aliplayer1/valuation_analysis_model" target="_blank" class="button">GitHub</a></li>
+                <li><strong>Membership Management Interface:</strong> A project available on my GitHub, aimed at simplifying membership management. <a href="https://github.com/aliplayer1/membership_management_interface" target="_blank" class="button">GitHub</a></li>
                 <!-- Add more projects as needed -->
             </ul>
         </section>
@@ -174,9 +202,8 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>Feel free to reach out to me through the following platforms:</p>
             <div class="contact-info">
-                <a href="mailto:aliasadpoor2@gmail.com">Email: aliasadpoor2@gmail.com</a>
+                <a href="mailto:aliasadpoor2@gmail.com">Email</a>
                 <a href="https://www.linkedin.com/in/aliasadpoor" target="_blank">LinkedIn</a>
                 <a href="https://github.com/aliplayer1" target="_blank">GitHub</a>
             </div>
@@ -191,29 +218,28 @@
     </div>
     <script>
         function toggleTheme() {
-			const body = document.body;
-			const themeToggleBtn = document.querySelector('.theme-toggle');
-			body.classList.toggle('light-theme');
-			const isLight = body.classList.contains('light-theme');
-			localStorage.setItem('theme', isLight ? 'light' : 'dark');
-			themeToggleBtn.classList.toggle('light', isLight);
-			themeToggleBtn.classList.toggle('dark', !isLight);
-		}
+            const body = document.body;
+            const themeToggleBtn = document.querySelector('.theme-toggle');
+            body.classList.toggle('light-theme');
+            const isLight = body.classList.contains('light-theme');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            themeToggleBtn.classList.toggle('light', isLight);
+            themeToggleBtn.classList.toggle('dark', !isLight);
+        }
 
-		function loadTheme() {
-			const savedTheme = localStorage.getItem('theme') || 'dark';
-			const body = document.body;
-			const themeToggleBtn = document.querySelector('.theme-toggle');
-			if (savedTheme === 'light') {
-				body.classList.add('light-theme');
-				themeToggleBtn.classList.add('light');
-			} else {
-				themeToggleBtn.classList.add('dark');
-			}
-		}
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            const body = document.body;
+            const themeToggleBtn = document.querySelector('.theme-toggle');
+            if (savedTheme === 'light') {
+                body.classList.add('light-theme');
+                themeToggleBtn.classList.add('light');
+            } else {
+                themeToggleBtn.classList.add('dark');
+            }
+        }
 
-loadTheme();
-
+        loadTheme();
     </script>
 </body>
 </html>
