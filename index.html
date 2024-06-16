@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <!-- Include Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Define CSS variables for dark theme */
         :root {
             --bg-color: #121212;
             --text-color: #e0e0e0;
@@ -17,8 +19,10 @@
             --border-color: #e0e0e0;
             --footer-bg-color: #1d1d1d;
             --footer-text-color: #bbbbbb;
+            --dimmed-text-color: rgba(224, 224, 224, 0.6); /* Dimmed color for dark theme */
         }
 
+        /* Define CSS variables for light theme */
         .light-theme {
             --bg-color: #ffffff;
             --text-color: #333333;
@@ -29,8 +33,10 @@
             --border-color: #333333;
             --footer-bg-color: #f5f5f5;
             --footer-text-color: #777777;
+            --dimmed-text-color: rgba(51, 51, 51, 0.6); /* Dimmed color for light theme */
         }
 
+        /* Basic styling for body */
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
@@ -39,31 +45,40 @@
             background-color: var(--bg-color);
             line-height: 1.6;
         }
+
+        /* Container for content with max-width */
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
+
+        /* Styling for header section */
         header {
             text-align: center;
             padding: 50px 0;
         }
+
         header h1 {
             margin: 0;
             font-size: 3em;
             color: var(--header-color);
             font-weight: 700;
         }
+
         header p {
             font-size: 1.2em;
             color: var(--subheader-color);
         }
+
+        /* Styling for navigation menu */
         nav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: 50px;
         }
+
         nav a {
             margin: 5px 10px;
             text-decoration: none;
@@ -75,32 +90,40 @@
             flex: 1 1 auto;
             text-align: center;
         }
+
         nav a:hover {
             color: var(--link-hover-color);
             border-color: var(--link-hover-color);
         }
+
+        /* Styling for sections */
         section {
             margin-bottom: 50px;
             text-align: center;
         }
+
         section h2 {
             font-size: 2.5em;
             font-weight: 700;
             color: var(--header-color);
             margin-bottom: 10px;
         }
+
         section p {
             font-size: 1.1em;
             color: var(--subheader-color);
             max-width: 700px;
             margin: 0 auto;
         }
+
+        /* Styling for contact info */
         .contact-info {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-bottom: 50px;
         }
+
         .contact-info a {
             display: inline-block;
             color: var(--text-color);
@@ -110,31 +133,39 @@
             border: 1px solid var(--border-color);
             border-radius: 25px;
         }
+
         .contact-info a:hover {
             color: var(--link-hover-color);
             border-color: var(--link-hover-color);
         }
+
+        /* Styling for project list */
         .project-list {
             list-style-type: none;
             padding: 0;
         }
+
         .project-list li {
             margin-bottom: 15px;
         }
+
         .project-list a.button {
             margin-left: 10px;
-            padding: 5px 10px;  /* Reduced padding */
-            font-size: 0.9em;  /* Reduced font size */
+            padding: 5px 10px; /* Reduced padding */
+            font-size: 0.9em; /* Reduced font size */
             text-decoration: none;
             color: var(--text-color);
             font-weight: 600;
             border: 1px solid var(--border-color);
             border-radius: 25px;
         }
+
         .project-list a.button:hover {
             color: var(--link-hover-color);
             border-color: var(--link-hover-color);
         }
+
+        /* Styling for footer */
         footer {
             text-align: center;
             padding: 20px 0;
@@ -143,15 +174,19 @@
             background-color: var(--footer-bg-color);
             color: var(--footer-text-color);
         }
+
         footer .social-icons a {
             margin: 0 10px;
             text-decoration: none;
             color: var(--text-color);
             font-size: 1.5em;
         }
+
         footer .social-icons a:hover {
             color: var(--link-hover-color);
         }
+
+        /* Styling for theme toggle button */
         .theme-toggle {
             position: absolute;
             top: 20px;
@@ -174,40 +209,48 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Button to toggle theme -->
     <button class="theme-toggle" onclick="toggleTheme()"></button>
     <div class="container">
+        <!-- Header section -->
         <header>
             <h1>Ali Asadpoor</h1>
             <p>Software Engineer, Finance and Rocket Enthusiast</p>
         </header>
+        <!-- Navigation menu -->
         <nav>
             <a href="#about">About Me</a>
             <a href="#projects">My Projects</a>
             <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
         </nav>
+        <!-- About Me section -->
         <section id="about">
             <h2>About Me</h2>
             <p>Hello! I'm Ali Asadpoor, a software engineer with a passion for rocketry, finance, economics, and physics. Based in the Greater Toronto Area, Ontario. Currently, I am a third-year student, honing my skills and working on various personal projects. I have a deep interest in space-related technology and have volunteered with my university's rocket club, focusing on avionics and ground station operations.
-               I've also developed a financial analysis tool which allows you to parse a company's financial statements and produce different financial metrics along with an estimated valuation of the stock price based on the DCF model (more to come!).
+                I've also developed a financial analysis tool which allows you to parse a company's financial statements and produce different financial metrics along with an estimated valuation of the stock price based on the DCF model (more to come!).
             </p>
         </section>
+        <!-- Projects section -->
         <section id="projects">
             <h2>My Projects</h2>
             <p>Here are some of my projects:</p>
             <ul class="project-list">
                 <li><strong>Financial Analysis System:</strong> A personal project for financial data analysis and insights. <a href="https://github.com/aliplayer1/financial-analysis-system" target="_blank" class="button">GitHub</a></li>
                 <li><strong>Membership Management Interface:</strong> A project available on my GitHub, aimed at simplifying membership management. <a href="https://github.com/aliplayer1/membership-management-interface" target="_blank" class="button">GitHub</a></li>
-                <li>More project descriptions will be included...</li>
-
+                <li><strong>Pong Game:</strong> A simple double-player pong game in Python. <a href="https://github.com/aliplayer1/PongGamePython3" target="_blank" class="button">GitHub</a></li>
+                <li><u>More project descriptions will be included...</u></li>
                 <!-- Add more projects as needed -->
             </ul>
         </section>
+        <!-- Resume section -->
         <section id="resume">
             <h2>Resume</h2>
-            <p>You can download my resume <a href="link_to_resume.pdf" download>here</a>.</p>
+            <p>You can download my resume <a href="resume_technical_06112024.pdf" download>here</a>.</p>
         </section>
+        <!-- Contact section -->
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-info">
@@ -216,6 +259,7 @@
                 <a href="https://github.com/aliplayer1" target="_blank">GitHub</a>
             </div>
         </section>
+        <!-- Footer section -->
         <footer>
             <p>&copy; 2024 Ali Asadpoor</p>
             <div class="social-icons">
@@ -225,6 +269,7 @@
         </footer>
     </div>
     <script>
+        // Function to toggle between light and dark themes
         function toggleTheme() {
             const body = document.body;
             const themeToggleBtn = document.querySelector('.theme-toggle');
@@ -235,6 +280,7 @@
             themeToggleBtn.classList.toggle('dark', !isLight);
         }
 
+        // Function to load the saved theme from localStorage
         function loadTheme() {
             const savedTheme = localStorage.getItem('theme') || 'dark';
             const body = document.body;
@@ -247,7 +293,9 @@
             }
         }
 
+        // Load the theme when the page is loaded
         loadTheme();
     </script>
 </body>
+
 </html>
