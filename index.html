@@ -178,6 +178,24 @@
 			transition: transform 0.1s; /* Smooth transition effect */
 		}
 
+        /* Styling for resume */
+        .resume a.button {
+			margin-left: 4px;
+			padding: 6px 9px; /* Reduced padding */
+			font-size: 0.8em; /* Reduced font size */
+			text-decoration: none;
+			color: var(--text-color);
+			font-weight: 600;
+			border: 1px solid var(--border-color);
+			border-radius: 25px;
+		}
+
+		.resume li a.button:hover {
+			background-color: var(--button-hover-bg);
+			transform: scale(2); /* Increase size slightly on hover */
+			transition: transform 0.1s; /* Smooth transition effect */
+		}
+
         /* Styling for footer */
         footer {
             text-align: center;
@@ -263,7 +281,9 @@
         <!-- Resume section -->
         <section id="resume">
             <h2>Resume</h2>
-            <p>You can download my resume <a href="resume_technical_06112024.pdf" download>here</a>.</p>
+			<ul class="resume">
+            <p>You can download my resume by clicking on the button <a href="resume_technical_06112024.pdf" download class="button">Resume</a></p>
+			</ul>
         </section>
         <!-- Contact section -->
         <section id="contact">
