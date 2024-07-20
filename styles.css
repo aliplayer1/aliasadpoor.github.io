@@ -215,9 +215,9 @@ footer .social-icons a:hover {
 }
 
 .theme-toggle.dark {
-    background-image: url('dark-mode-night-moon-svgrepo-com.svg'); /* Path to dark mode SVG */
+    background-image: url('./icons/dark-mode-night-moon-svgrepo-com.svg'); /* Path to dark mode SVG */
 }
 
 .theme-toggle.light {
-    background-image: url('light-mode-svgrepo-com.svg'); /* Path to light mode SVG */
+    background-image: url('./icons/light-mode-svgrepo-com.svg'); /* Path to light mode SVG */
 }
